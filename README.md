@@ -1,70 +1,57 @@
-# Getting Started with Create React App
+# Interactive Quiz App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Description
 
-## Available Scripts
+This Interactive Quiz App is a dynamic and engaging React-based application that allows users to test their knowledge across various subjects. With a sleek, modern UI powered by Material-UI, the app offers an intuitive and responsive user experience across different devices.
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+- **Multiple Quiz Categories**: Choose from a variety of quiz topics including General Knowledge, Science, and History.
+- **Dynamic Question Types**: Supports multiple-choice (single answer), multiple-select, and true/false questions.
+- **Interactive UI**: Engaging user interface with progress tracking and immediate feedback.
+- **Detailed Results**: Comprehensive result page showing score, percentage, and a question-by-question breakdown.
+- **Responsive Design**: Fully responsive layout that works seamlessly on desktop, tablet, and mobile devices.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Technologies Used
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- React
+- React Router for navigation
+- Material-UI for styling and components
+- Styled-components for additional custom styling
 
-### `npm test`
+## Usage
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. On the home page, select a quiz category.
+2. Answer each question by selecting the appropriate option(s).
+3. Click 'Next' to move to the following question.
+4. After completing all questions, view your results on the summary page.
+5. From the results page, you can choose to try another quiz.
 
-### `npm run build`
+## Project Structure
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+quiz-app/
+│
+├── src/
+│   ├── components/
+│   │   ├── QuizSelection.js
+│   │   ├── Quiz.js
+│   │   ├── Result.js
+│   │   └── Header.js
+│   │
+│   ├── services/
+│   │   └── quizService.js
+│   │
+│   ├── App.js
+│   └── index.js
+│
+├── public/
+│   └── index.html
+│
+├── package.json
+└── README.md
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Acknowledgments
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Thanks to the React and Material-UI communities for their excellent documentation and resources.
+- Icons provided by Material-UI icons library.

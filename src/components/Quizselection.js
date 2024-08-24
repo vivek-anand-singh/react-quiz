@@ -1,45 +1,67 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Typography, Button, Grid } from '@mui/material';
-import styled from 'styled-components';
+import { Typography, Button, Grid, Paper, Container, Box } from '@mui/material';
+import { styled } from '@mui/material/styles';
+import { School, Science, History } from '@mui/icons-material';
+import { getQuizzes } from '../services/quizService';
 
-const quizzes = [
-  { id: 1, title: 'General Knowledge' },
-  { id: 2, title: 'Science' },
-  { id: 3, title: 'History' },
-];
+const StyledPaper = styled(Paper)(({ theme }) => ({
+  padding: theme.spacing(3),
+  textAlign: 'center',
+  color: theme.palette.text.secondary,
+  transition: 'transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out',
+  '&:hover': {
+    transform: 'scale(1.05)',
+    boxShadow: theme.shadows[10],
+  },
+}));
 
-const StyledButton = styled(Button)`
-  margin: 10px;
-  transition: transform 0.2s;
+const IconWrapper = styled(Box)(({ theme }) => ({
+  fontSize: '4rem',
+  marginBottom: theme.spacing(2),
+}));
 
-  &:hover {
-    transform: scale(1.05);
-  }
-`;
+const quizIcons = {
+  'General Knowledge': <School fontSize="inherit" />,
+  'Science': <Science fontSize="inherit" />,
+  'History': <History fontSize="inherit" />,
+};
 
 const QuizSelection = () => {
+  const quizzes = getQuizzes();
+
   return (
-    <Grid container direction="column" alignItems="center" spacing={3}>
-      <Grid item>
-        <Typography variant="h4" gutterBottom>
-          Select a Quiz
+    <Container maxWidth="md">
+      <Box my={4}>
+        <Typography variant="h3" component="h1" gutterBottom align="center">
+          Choose Your Quiz Adventure
         </Typography>
-      </Grid>
-      {quizzes.map((quiz) => (
-        <Grid item key={quiz.id}>
-          <StyledButton
-            component={Link}
-            to={`/quiz/${quiz.id}`}
-            variant="contained"
-            color="primary"
-            size="large"
-          >
-            {quiz.title}
-          </StyledButton>
+        <Grid container spacing={4}>
+          {quizzes.map((quiz) => (
+            <Grid item xs={12} sm={6} md={4} key={quiz.id}>
+              <StyledPaper elevation={3}>
+                <IconWrapper color="primary">
+                  {quizIcons[quiz.title]}
+                </IconWrapper>
+                <Typography variant="h5" component="h2" gutterBottom>
+                  {quiz.title}
+                </Typography>
+                <Button
+                  component={Link}
+                  to={`/quiz/${quiz.id}`}
+                  variant="contained"
+                  color="primary"
+                  size="large"
+                  fullWidth
+                >
+                  Start Quiz
+                </Button>
+              </StyledPaper>
+            </Grid>
+          ))}
         </Grid>
-      ))}
-    </Grid>
+      </Box>
+    </Container>
   );
 };
 

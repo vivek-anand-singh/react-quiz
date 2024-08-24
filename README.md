@@ -29,6 +29,7 @@ This Interactive Quiz App is a dynamic and engaging React-based application that
 
 ## Project Structure
 
+```plaintext
 quiz-app/
 │
 ├── src/
@@ -49,6 +50,8 @@ quiz-app/
 │
 ├── package.json
 └── README.md
+
+``` 
 
 
 ## Acknowledgments

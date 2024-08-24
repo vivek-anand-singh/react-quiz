@@ -6,7 +6,7 @@ This Interactive Quiz App is a dynamic and engaging React-based application that
 
 ## Features
 
-- **Multiple Quiz Categories**: Choose from a variety of quiz topics including General Knowledge, Science, and History.
+- **Multiple Quiz Categories**: Choose from a variety of quiz topics including General Knowledge and Science.
 - **Dynamic Question Types**: Supports multiple-choice (single answer), multiple-select, and true/false questions.
 - **Interactive UI**: Engaging user interface with progress tracking and immediate feedback.
 - **Detailed Results**: Comprehensive result page showing score, percentage, and a question-by-question breakdown.
